@@ -113,8 +113,10 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 25px;
+  z-index: 999 !important;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  z-index: 999 !important;
   font-size: 25px;
 }

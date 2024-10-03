@@ -1,6 +1,6 @@
-import About from "../../components/about/About";
+import About from "./particals/About";
 import Hero from "../../components/hero/Hero";
-import Projects from "../../components/home/projects/Projects";
+import Projects from "./particals/Projects";
 
 const HomePage = () => {
   return (

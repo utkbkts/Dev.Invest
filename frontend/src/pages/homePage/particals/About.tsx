@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import invest from "../../assets/images/dev.invest.png";
+import invest from "../../../assets/images/dev.invest.png";
 
 const About = () => {
   return (

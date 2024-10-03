@@ -1,10 +1,10 @@
-import Categories from "../../sidebar/Categories";
-import LatestAddedProjects from "../../sidebar/LatestAddedProjects";
-import PopularUser from "../../sidebar/PopularUser";
-import MostCommentProjects from "../../sidebar/MostCommentProjects";
-import PopularProjects from "../../sidebar/PopularProjects";
+import Categories from "../../../components/sidebar/Categories";
+import LatestAddedProjects from "../../../components/sidebar/LatestAddedProjects";
+import PopularUser from "../../../components/sidebar/PopularUser";
+import MostCommentProjects from "../../../components/sidebar/MostCommentProjects";
+import PopularProjects from "../../../components/sidebar/PopularProjects";
 
-import Search from "../../sidebar/Search";
+import Search from "../../../components/sidebar/Search";
 import { data } from "../../../content/data";
 import { useSearchParams } from "react-router-dom";
 const Projects = () => {
@@ -16,7 +16,6 @@ const Projects = () => {
       item.name.toLowerCase().includes(search.toLowerCase()) ||
       item.category.toLowerCase().includes(search.toLowerCase())
   );
-  console.log("🚀 ~ Projects ~ filteredData:", filteredData);
 
   return (
     <div className="h-full w-full">

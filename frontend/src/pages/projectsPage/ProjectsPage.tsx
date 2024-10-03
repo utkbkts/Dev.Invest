@@ -1,10 +1,12 @@
 import Hero from "../../components/hero/Hero";
 import image from "../../assets/images/image1.jpg";
-import PopularSection from "./PopularSection";
-import LatestProjectSection from "./LatestProjectSection";
+import PopularSection from "./particals/PopularSection";
+import LatestProjectSection from "./particals/LatestProjectSection";
+import MostCommentProject from "./particals/MostCommentProject";
+import PopularUser from "./particals/PopularUser";
 const ProjectsPage = () => {
   return (
-    <div className="">
+    <div className="mb-12">
       <Hero
         image={image}
         title="Projects"
@@ -58,7 +60,17 @@ const ProjectsPage = () => {
       </div>
       <div className="mt-[10%] container mx-auto">
         <PopularSection />
-        <LatestProjectSection />
+        <div className="flex w-full gap-4">
+          <div className="w-1/2">
+            <LatestProjectSection />
+          </div>
+          <div className="w-1/2">
+            <MostCommentProject />
+          </div>
+        </div>
+        <div className="mt-12">
+          <PopularUser />
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
-import image from "../../assets/images/image1.jpg";
+import image from "../../../assets/images/image1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 const popularData = [
   {
     id: 1,
@@ -31,6 +32,8 @@ const popularData = [
   },
 ];
 const PopularSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1 className="text-black bg-white inline-block py-2 px-4 rounded-md font-roboto font-bold">
@@ -51,7 +54,10 @@ const PopularSection = () => {
           >
             {popularData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="relative p-2">
+                <div
+                  className="relative p-2 cursor-pointer"
+                  onClick={() => navigate(`/project/detail/${item.id}`)}
+                >
                   <img
                     src={item.image}
                     alt={`Popüler Proje `}

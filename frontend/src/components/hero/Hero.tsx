@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import video from "../../assets/video/video.mp4";
 import { useLocation } from "react-router-dom";
 import clsx from "clsx";
@@ -7,7 +8,7 @@ type HeroProps = {
   titleClass?: string;
   subTitleClass?: string;
   image?: string;
-  subTitle?: string;
+  subTitle?: string | any;
   titleMainClass?: string;
 };
 

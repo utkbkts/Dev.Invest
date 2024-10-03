@@ -1,4 +1,4 @@
-import { FaHome, FaProjectDiagram, FaUsers, FaComments } from "react-icons/fa";
+import { FaHome, FaProjectDiagram, FaUsers } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { Link } from "react-router-dom";
 const headerMobileMenu = [
@@ -19,12 +19,6 @@ const headerMobileMenu = [
     title: "Yatırımcılar",
     icon: <FaUsers />,
     href: "/investors",
-  },
-  {
-    id: 4,
-    title: "Tartışma",
-    icon: <FaComments />,
-    href: "/argument",
   },
 ];
 type MobileMenuProps = {

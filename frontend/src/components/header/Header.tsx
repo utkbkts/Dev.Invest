@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -14,12 +15,12 @@ const Header = () => {
     <>
       <div className="fixed top-0 h-[8vh] z-50 w-full shadow-xl">
         <div className="container mx-auto flex items-center justify-between mt-4 ">
-          <div className="p-2">
+          <Link to={"/"} className="p-2">
             <h1 className="font-dancing">
               <span className="text-[24px] ">Dev.</span>
               Invest
             </h1>
-          </div>
+          </Link>
           <div
             onClick={() => setActive(!active)}
             className={`hamburger ${active && "active"}`}
