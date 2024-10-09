@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Form = () => {
   return (
     <div className="w-full mb-4">
@@ -7,7 +9,7 @@ const Form = () => {
       <div className="flex gap-2 w-full justify-between pt-4">
         <div className="flex gap-2">
           <img src="" alt="" className="w-12 h-12 rounded-full bg-black" />
-          <div className="flex flex-col">
+          <Link to={"/form/detail/2"} className="flex flex-col">
             <span className="hover:underline cursor-pointer">
               Yazıcı aynı yazıları tekrarlıyor ?
             </span>
@@ -16,7 +18,7 @@ const Form = () => {
               <span className="hover:underline cursor-pointer">22:51 da</span> -{" "}
               <span className="hover:underline cursor-pointer"> category</span>
             </span>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col">
           <span className="flex items-center justify-between">
